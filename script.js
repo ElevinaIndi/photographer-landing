@@ -7,5 +7,13 @@ form.addEventListener('submit', function (e) {
     const email = form.querySelector('input[type="email"]').value
     const message = form.querySelector('textarea').value
 
-    console.log(`Форма отправлена правильно. Имя: ${name}, Email: ${email}, Сообщение: ${message}`)
+    console.log(`Форма отправлена правильно. \nИмя: ${name}\nEmail: ${email}\nСообщение: ${message}`)
+
+    const confirmation = document.createElement('p')
+    confirmation.textContent = 'Спасибо, ваше сообщение отправлено!'
+    confirmation.style.color = 'red'
+    confirmation.style.marginTop = '10px'
+    confirmation.style.textAlign = 'center'
+
+    form.append(confirmation)
 })
