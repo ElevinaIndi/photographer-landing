@@ -7,7 +7,6 @@ function confirmation() {
     form.append(p)
 }
 
-
 const form = document.querySelector('form')
 
 form.addEventListener('submit', function (e) {
@@ -17,9 +16,7 @@ form.addEventListener('submit', function (e) {
     const email = form.querySelector('input[type="email"]').value
     const message = form.querySelector('textarea').value
 
-    console.log(`Форма отправлена правильно. \nИмя: ${name}\nEmail: ${email}\nСообщение: ${message}`)
-
     confirmation()
 
-    
+    form.reset();
 })
