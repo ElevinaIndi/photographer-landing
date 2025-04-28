@@ -1,3 +1,13 @@
+function confirmation() {
+    const p = document.createElement('p')
+    p.textContent = 'Спасибо, ваше сообщение отправлено!'
+    p.style.color = 'red'
+    p.style.marginTop = '10px'
+    p.style.textAlign = 'center'
+    form.append(p)
+}
+
+
 const form = document.querySelector('form')
 
 form.addEventListener('submit', function (e) {
@@ -9,11 +19,7 @@ form.addEventListener('submit', function (e) {
 
     console.log(`Форма отправлена правильно. \nИмя: ${name}\nEmail: ${email}\nСообщение: ${message}`)
 
-    const confirmation = document.createElement('p')
-    confirmation.textContent = 'Спасибо, ваше сообщение отправлено!'
-    confirmation.style.color = 'red'
-    confirmation.style.marginTop = '10px'
-    confirmation.style.textAlign = 'center'
+    confirmation()
 
-    form.append(confirmation)
+    
 })
